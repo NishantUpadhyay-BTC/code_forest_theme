@@ -1,0 +1,51 @@
+<div class="row repo-show white">
+    <div class="container z-depth-1">
+        <div class="row">
+            <div class="col l12"><h4 class="para-text" style="margin-left: 10px"> Repo Name</h4></div>
+            <form class="col s12 poc_form">
+                <div class="row">
+                  <div class="col l5">
+                    <div style="width:300">
+                        <div class="hovereffect">
+                            <%= image_tag 'demo_repo.png', width: 300 %>
+                            <div class="overlay">
+                                <h2>Image</h2>
+                                <p>
+                                  <a href="#">EDIT</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="col l7">
+                    <div class="input-field col l12">
+                        <textarea id="textarea1" class="materialize-textarea poc_desc_text_area"></textarea>
+                        <label for="textarea1">Description</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col l12">
+                    <label for="chips">Tags</label>
+                    <div class="chips chips-placeholder"></div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col l12">
+                    <button class="btn waves-effect waves-light" style="float:right" type="submit" name="action">PREVIEW
+                      <i class="material-icons right">send</i>
+                    </button>
+                  </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script>
+$(document).ready(function(){
+  $('.chips-placeholder').material_chip({
+    placeholder: 'Enter a tag',
+    secondaryPlaceholder: '+Tag',
+  });
+})
+</script>
