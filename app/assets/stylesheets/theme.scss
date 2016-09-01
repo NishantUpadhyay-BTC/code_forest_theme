@@ -73,7 +73,7 @@ p.area{
   font-size: 18px !important
 }
 #splash-blue{
-    height: 600px;
+    height: 610px;
     background-color: #7cb342 !important
 }
 .github_login{
@@ -100,9 +100,6 @@ p.area{
     font: bold 18px Arial,Helvetica,Sans-serif;
     color: #d7d7d7;
     padding: 6px 15px 6px 35px;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    border-radius: 20px;
     -webkit-transition: all 0.7s ease 0s;
     -moz-transition: all 0.7s ease 0s;
     -o-transition: all 0.7s ease 0s;
@@ -112,13 +109,12 @@ p.area{
 #search input[type="text"]:focus {
     background: #fff;
     color: #6a6f75;
-    border-radius: 0px;
-    box-shadow: none
+    box-shadow: #000 !important
 }
 .fa-search {
     position: absolute;
    top: 421px;
-   left: 1146px;
+   left: 1166px;
    font-size: 22px;
    color: #ccc;
  }
@@ -341,3 +337,18 @@ textarea:focus, .input:focus {
 textarea:focus + label {
     color: #7CB342 !important;
   }
+.common-btn{
+  background-color: #7CB342 !important;
+}
+.common-btn:hover{
+  background-color: #689f38 !important;
+}
+.common-btn:focus{
+  background-color: #689f38 !important;
+}
+
+.dash-table{
+  td, th{
+    padding: 20px !important;
+  }
+}
