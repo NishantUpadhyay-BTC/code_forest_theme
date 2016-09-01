@@ -1,0 +1,148 @@
+<div class=" container row">
+  <p class="para-text"> Confirm your changes and click  <a href='#'>Publish</a></p>
+</div>
+<div class="row repo-show white">
+    <div class="container z-depth-1">
+        <div class="panel-layout">
+            <div class="panel-box col-xs-8 col l10 white">
+                <div class="panel-layout">
+                    <div class="panel-box col-xs-12 bg-green poc-img-show-box">
+                        <div class="panel-content">
+                            <div class="row">
+                              <div class="col l4">
+                                <%= image_tag "demo_repo.png"%>
+                              </div>
+                              <div class="col l8 para-text">
+                                <h4 class="para-text"> Repo Name</h4>
+                                <h6>last updated on 12th Dec</h6>
+                                <div class="chip">
+                                  Tag1
+                                </div>
+                                <div class="chip">
+                                  Tag2
+                                </div>
+                                <div class="row">
+                                  <div class="col l12">
+                                    <div class="testimonial-author-wrapper">
+                                      <%= image_tag "user.jpg",  class: "auth-img img-rounded float-right" %>
+                                      <div class="testimonial-author text-right">
+                                        <b>Horia Simon</b>
+                                        <span>UI Designer, Supina.com</span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col l12 para-text">
+                                  <p class="poc-desc">
+                                    this is description this is description this is description this is description this is description this is descriptionthis is description this is description this is description this is description this is description this is description
+                                  </p>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col l6">
+                                <div id="barchart_values"  style="margin-left: 20px; width: auto; height: 300px;"></div>
+                              </div>
+                              <div class="col l6 para-text">
+                                <div class="row download-links">
+                                  <ul>
+                                    <li>
+                                      <i class="medium fa fa-github"></i> <a href="#">GITHUB PAGE</a>
+                                    </li>
+                                    <li>
+                                      <i class="medium fa fa-file-text-o"></i> <a href="#">GITHUB WIKI</a>
+                                    </li>
+                                    <li>
+                                      <i class="medium fa fa-download"></i> <a href="#">DOWNLOAD</a>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <button class="btn waves-effect waves-light common-btn" style="float:right; margin-right: 5%" type="submit" name="action">It's All Right, Please Publish!
+                                <i class="material-icons right">send</i>
+                              </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-box col-xs-2 col l2 counter-box " style="vertical-align: top">
+                <div class="panel-content">
+                    <div class="row">
+                        <div class="col l6">
+                            <i class="medium fa fa-star"></i>
+                        </div>
+                        <div class="col l6">111</div>
+                    </div>
+                    <div class="row">
+                        <div class="col l6">
+                            <i class="medium fa fa-code-fork"></i>
+                        </div>
+                        <div class="col l6">111</div>
+                    </div>
+                    <div class="row">
+                        <div class="col l6">
+                            <i class="medium fa fa-bell"></i>
+                        </div>
+                        <div class="col l6">1122</div>
+                    </div>
+                    <div class="row">
+                        <div class="col l6">
+                            <i class="medium fa fa-download"></i>
+                        </div>
+                        <div class="col l6">1145</div>
+                    </div>
+                    <div class="row">
+                        <div class="col l6">
+                            <i class="medium fa fa-eye"></i>
+                        </div>
+                        <div class="col l6">6512</div>
+                    </div>
+                    <div class="row">
+                        <div class="col l6">
+                            <i class="medium fa fa-bookmark"></i>
+                        </div>
+                        <div class="col l6">712</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+<script>
+google.charts.load("current", {packages:["corechart"]});
+    google.charts.setOnLoadCallback(drawChart);
+    function drawChart() {
+      var data = google.visualization.arrayToDataTable([
+        ["Element", "Density", { role: "style" } ],
+        ["Java", 8.94, "#689f38"],
+        ["Ruby", 10.49, "#689f38"],
+        ["Rails", 19.30, "#689f38"],
+        ["JS", 21.45, "color: #689f38"]
+      ]);
+
+      var view = new google.visualization.DataView(data);
+      view.setColumns([0, 1,
+                       { calc: "stringify",
+                         sourceColumn: 1,
+                         type: "string",
+                         role: "annotation" },
+                       2]);
+
+      var options = {
+        title: "Language used in percentage",
+        width: 350,
+        height: 300,
+        bar: {groupWidth: "15%"},
+        legend: { position: "none" },
+      };
+      var chart = new google.visualization.BarChart(document.getElementById("barchart_values"));
+      chart.draw(view, options);
+  }
+</script>

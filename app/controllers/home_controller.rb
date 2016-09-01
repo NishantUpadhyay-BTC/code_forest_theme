@@ -7,4 +7,7 @@ class HomeController < ApplicationController
 
   def new
   end
+
+  def publish
+  end
 end
